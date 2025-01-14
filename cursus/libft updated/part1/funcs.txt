@@ -10,16 +10,16 @@ toupper
 tolower
 atoi
 strnstr
-
-In progress:
 strlcpy
 strncmp
-
-To do:
-bzero
-memcpy
-memmove
 strchr
 strrchr
+
+In progress:
+bzero
+
+To do:
+memcpy
+memmove
 memchr
 memcmp
