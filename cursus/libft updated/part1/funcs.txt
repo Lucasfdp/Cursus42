@@ -1,0 +1,25 @@
+Done:
+isalpha
+isdigit
+isalnum
+isascii
+isprint
+strlen
+strlcat
+toupper
+tolower
+atoi
+strnstr
+
+In progress:
+strlcpy
+strncmp
+
+To do:
+bzero
+memcpy
+memmove
+strchr
+strrchr
+memchr
+memcmp
