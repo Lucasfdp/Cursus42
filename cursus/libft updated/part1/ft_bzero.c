@@ -15,23 +15,23 @@
 
 void	ft_bzero(void *s, unsigned int n)
 {
-	unsigned int	i;
+	unsigned char	*ptr;
 
-	i = 0;
-	while (str[i] != '\0' && i <= n)
+	ptr = s;
+	while (n > 0)
 	{
-		str[i] = '\0';
-		i++;
+		*ptr = 0;
+		ptr++;
+		n--;
 	}
-	return;
 }
 int	main()
 {
 	char	str[] = "String";
-	unsigned int	n = 2;
+	unsigned int	n = 1;
 
-	printf("%s", str);
-	ft_bzero(str, n);
-	printf("%s", str);
+	printf("%s\n", str);
+	bzero(str, n);
+	printf("Should be blank: %s", str);
 	return (0);
 }
