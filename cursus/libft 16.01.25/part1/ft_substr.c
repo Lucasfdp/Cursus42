@@ -6,13 +6,15 @@
 /*   By: luferna3 <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 17:03:52 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/15 18:03:46 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/18 16:50:05 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
-int	ft_strlen(const char *str)
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -30,17 +32,17 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	substr_len;
 	char	*substr;
 	size_t	i;
-	if (s == NULL || (start + len) > str_len)
-	{
-		return NULL;
-	}
 
 	str_len = ft_strlen(s);
+	if (s == NULL || (start + len) > str_len)
+	{
+		return (NULL);
+	}
 	if (str_len < len + start)
 	{
 		substr_len = str_len - start;
 	}
-	else 
+	else
 	{
 		substr_len = len;
 	}
@@ -48,7 +50,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	if (substr == NULL)
 	{
 		printf("Mem alloc failed");
-		return NULL;
+		return (NULL);
 	}
 	i = 0;
 	while (i < substr_len)
@@ -59,12 +61,12 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	substr[substr_len] = '\0';
 	return (substr);
 }
-
-int	main()
+/*
+int	main(void)
 {
 	const char	str[] = "General Kenobi";
-	unsigned int	start = 4;
-	size_t	len = 5;
+	unsigned int	start = 2;
+	size_t	len = 8;
 	char	*substring = ft_substr(str, start, len);
 
 	if (substring == NULL)
@@ -77,4 +79,4 @@ int	main()
 	}
 	free(substring);
 	return (0);
-}
+}*/
