@@ -10,48 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	**ft_split(char const *s, char c)
-{
-	char const	*substart;
-	char		**result;
-	int			substrs;
-	int			i;
-	int			j;
-	size_t		len;
-
-	i = 0;
-	j = 0;
-	if (!*s)
-	{
-		return (NULL);
-	}
-	substrs = num_substrs(s1, c);
-	result = malloc((substrs + 1) * (sizeof(char *)))
-	if (!result)
-	{
-		return (NULL);
-	}
-	while (*s)
-	{
-		if (*s == c)
-		{
-			s++;
-		}
-		substart = s;
-		while (*s && s != c)
-		{
-			s++;
-		}
-		if (substart != s)
-		{
-			result[i] = strdup(start)
-}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int	num_substrs(char const *s, char c)
 {
 	int	num;
 
-	count = 0;
+	num = 0;
 	while (*s)
 	{
 		while (*s == c)
@@ -69,28 +36,104 @@ int	num_substrs(char const *s, char c)
 	}	
 	return (num);
 }
-
-char	*ft_strdup(const char *s)
+char	*ft_alloc_cpy(char const *start, char const *end)
 {
+	char	*substring;
 	size_t	len;
-	size_t	i;
-	char	*new;
 
-	if (s == NULL)
+	len = end - start;
+	substring = calloc(len + 1, sizeof(char));
+	if (!substring)
 	{
 		return (NULL);
 	}
-	len = ft_strlen(s) + 1;
-	new = malloc(len);
-	if (new == NULL)
-	{
-		return (NULL);
-	}
+	strlcpy(substring, start, len + 1);
+	return (substring);
+}
+
+void	ft_free_all(char **result, int count)
+{
+	int	i;
+
 	i = 0;
-	while (s[i] != '\0')
+	while (i > count)
 	{
-		new[i] = s[i];
+		free(result[i]);
 		i++;
 	}
-	return (new);
+	free(result);
+}
+/*size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+	size_t	src_len;
+
+	src_len = ft_strlen(src);
+	i = 0;
+	while (src[i] != '\0' && i <= size -1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (src_len);
+}*/
+char    **ft_split(char const *s, char c)
+{
+        char const      *substart;
+        char            **result;
+        int                     substrs;
+        int                     i;
+
+        i = 0;
+        substrs = num_substrs(s, c);
+        result = calloc(substrs + 1, sizeof(char *));
+        if (!result)
+        {
+                return (NULL);
+        }
+        while (*s)
+        {
+                while (*s == c)
+                {
+                        s++;
+                }
+                if (*s)
+                {
+                        substart = s;
+                        while (*s && *s != c)
+                        {
+                                s++;
+                        }
+                        result[i] = ft_alloc_cpy(substart, s);
+                        if (!result[i])
+                        {
+                                ft_free_all(result, i);
+                                return (NULL);
+                        }
+                        i++;
+                }
+        }
+        return (result);
+}
+
+int	main(void)
+{
+	char	str[] = "General Kenobi, ive been expecting you.";
+	char	c = ' ';
+	char	**result = ft_split(str, c);
+	int	i;
+
+	i = 0;
+	if (result)
+	{
+		while (result[i])
+		{
+			printf("Substring %d is: %s\n", i, result[i]);
+			free(result[i]);
+			i++;
+		}
+		free(result);
+	}
+	return (0);
 }
