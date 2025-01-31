@@ -1,0 +1,39 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/13 15:21:27 by luferna3          #+#    #+#             */
+/*   Updated: 2025/01/30 19:01:08 by luferna3         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+//isprint: fucntion to check if character is in the printable ascii characters
+#include "libft.h"
+
+int	ft_isprint(int c)
+{
+	if (c >= 32 && c <= 126)
+	{
+		return (1);
+	}
+	else
+		return (0);
+}
+/*
+int	main(void)
+{
+	char	a;
+	char	b;
+	char	c;
+
+	a = '+';
+	b = 'b';
+	c = '=';
+	printf("%d\n", ft_isprint(a));
+	printf("%d\n", ft_isprint(b));
+	printf("%d\n", ft_isprint(c));
+	return (0);
+}*/
