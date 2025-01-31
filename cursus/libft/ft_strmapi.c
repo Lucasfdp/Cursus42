@@ -6,13 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 14:46:48 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 19:56:46 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:00:39 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

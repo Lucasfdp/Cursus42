@@ -6,12 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:21:27 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:05:33 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:54:27 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_isprint(int c)
 {

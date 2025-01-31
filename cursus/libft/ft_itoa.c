@@ -6,13 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 11:58:41 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:05:18 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:54:31 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	ft_count_nums(int n)
 {

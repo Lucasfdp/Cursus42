@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luferna3 <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 13:54:42 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 15:49:04 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:58:42 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {

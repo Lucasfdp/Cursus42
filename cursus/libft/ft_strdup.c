@@ -6,14 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:03:51 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 19:58:49 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:00:18 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

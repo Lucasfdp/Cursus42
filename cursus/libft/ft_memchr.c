@@ -6,13 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 14:02:34 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:04:56 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:58:55 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -6,13 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 18:28:51 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:07:39 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:53:40 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 void	ft_bzero(void *s, size_t n)
 {

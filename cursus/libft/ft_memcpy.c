@@ -6,12 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:07:06 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:03:53 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:59:08 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

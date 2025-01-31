@@ -6,7 +6,7 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 14:03:48 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/30 14:48:28 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/30 16:27:35 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,26 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*temp;
 	t_list	*newlist;
-	
-	temp = lst;
+	t_list	*newnode;
+
+	newlist = NULL;
 	if (!lst || !f || !del)
 	{
 		return (NULL);
 	}
-	while (temp)
+	while (lst)
 	{
-		if (lst->content != NULL)
+		newnode = ft_lstnew(f(lst->content));
+		if (!newnode)
 		{
-			if (f(lst->content))
-			{
-				ft_lstnew(f(lst->content));
-			}
-			else
-			{
-				del(lst->content);
-			}
+			ft_lstclear(&newlist, free);
+			return (NULL);
 		}
-		lst = temp;
+		ft_lstadd_back(&newlist, newnode);
+		lst = lst->next;
 	}
-	
+	return (newlist);
 }
 // void	ft_printlst(t_list *head)
 // {
@@ -48,21 +44,21 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 // 	}
 // }
 
-char	*ft_toupperex(char *c)
-{
-    int i;
-   
-    i = 0;
-    while (c[i] != '\0')
-	{
-        if (c[i] >= 'a' && c[i] <= 'z')
-	    {
-		    c[i] = c[i] - 32;
-    	}
-        i++;
-    }
-	return (c);
-}
+// char	*ft_toupperex(char *c)
+// {
+//     int i;
+//   
+//     i = 0;
+//     while (c[i] != '\0')
+// 	{
+//         if (c[i] >= 'a' && c[i] <= 'z')
+// 	    {
+// 		    c[i] = c[i] - 32;
+//     	}
+//         i++;
+//     }
+// 	return (c);
+// }
 
 // void	delete(void *node)
 // {
@@ -91,7 +87,7 @@ char	*ft_toupperex(char *c)
 // void	*ft_toupperex(void *c)
 // {
 //     int i;
-   
+//   
 //     i = 0;
 //     while (c[i] != '\0')
 // 	{

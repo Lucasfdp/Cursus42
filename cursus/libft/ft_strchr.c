@@ -6,13 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 14:56:30 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 19:59:11 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:00:13 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strchr(const char *str, int c)
 {

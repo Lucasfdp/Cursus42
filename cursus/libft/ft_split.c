@@ -6,12 +6,10 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 16:21:53 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:00:38 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:00:08 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static size_t	ft_sub_len(const char *s, char c)

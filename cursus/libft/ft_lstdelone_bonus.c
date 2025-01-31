@@ -6,7 +6,7 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:50:21 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/30 15:04:41 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/30 16:20:35 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,19 +22,19 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 	free(lst);
 }
 
-void	delete(void *node)
-{
-	free(node);
-}
+// void	delete(void *node)
+// {
+// 	free(node);
+// }
 
-void	ft_printlst(t_list *head)
-{
-	while (head)
-	{
-		printf("%s\n", (char *)head->content);
-		head = head->next;
-	}
-}
+// void	ft_printlst(t_list *head)
+// {
+// 	while (head)
+// 	{
+// 		printf("%s\n", (char *)head->content);
+// 		head = head->next;
+// 	}
+// }
 // int main(void)
 // {
 // 	t_list  *head;
@@ -71,59 +71,59 @@ void	ft_printlst(t_list *head)
 // 	ft_printlst(head);
 // 	return(0);
 // }
-int main()
-{
-    // Creating three integers to be stored in the list
-    int *data1 = (int *)malloc(sizeof(int));
-    *data1 = 42;
-    int *data2 = (int *)malloc(sizeof(int));
-    *data2 = 84;
-    int *data3 = (int *)malloc(sizeof(int));
-    *data3 = 168;
+// int main()
+// {
+//     Creating three integers to be stored in the list
+//     int *data1 = (int *)malloc(sizeof(int));
+//     *data1 = 42;
+//     int *data2 = (int *)malloc(sizeof(int));
+//     *data2 = 84;
+//     int *data3 = (int *)malloc(sizeof(int));
+//     *data3 = 168;
 
-    // Check for malloc failure
-    if (!data1 || !data2 || !data3)
-    {
-        printf("Memory allocation failed.\n");
-        return 1;  // Exit if memory allocation fails
-    }
+//     Check for malloc failure
+//     if (!data1 || !data2 || !data3)
+//     {
+//         printf("Memory allocation failed.\n");
+//         return 1;  // Exit if memory allocation fails
+//     }
 
-    // Creating three list nodes
-    t_list *node1 = ft_lstnew(data1);
-    t_list *node2 = ft_lstnew(data2);
-    t_list *node3 = ft_lstnew(data3);
+//     Creating three list nodes
+//     t_list *node1 = ft_lstnew(data1);
+//     t_list *node2 = ft_lstnew(data2);
+//     t_list *node3 = ft_lstnew(data3);
 
-    // Check if list node creation failed
-    if (!node1 || !node2 || !node3)
-    {
-        printf("Memory allocation for list nodes failed.\n");
-        return 1;
-    }
+//     Check if list node creation failed
+//     if (!node1 || !node2 || !node3)
+//     {
+//         printf("Memory allocation for list nodes failed.\n");
+//         return 1;
+//     }
 
-    // Linking the nodes together
-    node1->next = node2;
-    node2->next = node3;
+//     Linking the nodes together
+//     node1->next = node2;
+//     node2->next = node3;
 
-    // Print the list before deletion
-    printf("List before deletion:\n");
-    ft_printlst(node1);
+//     Print the list before deletion
+//     printf("List before deletion:\n");
+//     ft_printlst(node1);
 
-    // Now, delete the second node (node2) and its content
-    // First, update node1->next to point to node3
-    node1->next = node2->next;
+//     Now, delete the second node (node2) and its content
+//     First, update node1->next to point to node3
+//     node1->next = node2->next;
 
-    // Delete the second node
-    ft_lstdelone(node2, delete);
+//     Delete the second node
+//     ft_lstdelone(node2, delete);
 
-    // Print the list after deletion
-    printf("\nList after deletion of second node:\n");
-    ft_printlst(node1);
+//     Print the list after deletion
+//     printf("\nList after deletion of second node:\n");
+//     ft_printlst(node1);
 
-    // Delete the first node
-    ft_lstdelone(node1, delete);
+//     Delete the first node
+//     ft_lstdelone(node1, delete);
 
-    // Delete the third node
-    ft_lstdelone(node3, delete);
+//     Delete the third node
+//     ft_lstdelone(node3, delete);
 
-    return 0;
-}
+//     return 0;
+// }

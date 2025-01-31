@@ -6,12 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 12:51:55 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 19:57:26 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:00:32 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {

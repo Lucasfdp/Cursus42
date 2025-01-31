@@ -6,12 +6,10 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/23 12:47:34 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:09:37 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:58:25 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_inset(char c, char const *set)
@@ -55,7 +53,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		start++;
 	}
-	trimmed[i] = 0;
+	trimmed[i] = '\0';
 	return (trimmed);
 }
 /*

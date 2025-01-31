@@ -6,14 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/22 12:33:29 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:02:49 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:59:23 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
 {

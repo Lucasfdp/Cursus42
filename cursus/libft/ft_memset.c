@@ -6,13 +6,11 @@
 /*   By: luferna3 <luferna3@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:36:47 by luferna3          #+#    #+#             */
-/*   Updated: 2025/01/29 20:03:04 by luferna3         ###   ########.fr       */
+/*   Updated: 2025/01/31 17:59:18 by luferna3         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {
